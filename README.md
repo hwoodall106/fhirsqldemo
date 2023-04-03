@@ -8,9 +8,21 @@ This is a set of instructions to run and modify the FHIRSQLBuilder demo, includi
 - The FHIRSQLBuilder then loads the data into these tables automatically
 - We can build custom cubes based on these tables and create dashboards on top of the cubes to visualise the data
 
-All of these steps have been done, but I'll run through them in a bit more detail so they can be modified for other uses.
+## To explore our existing demo:
+
+- Start the instance i-04d2542875fdd193a named UKFHIRSERVER on the UK Sales Engineering AWS account
+- Download PuTTY at https://www.putty.org/ to SSH to the instance
+  - IP: 52.56.68.107
+  - Connection/SSH/Auth/Credentials/Private Key File for Authentication: UKFHIR.ppk
+  - Run:   iris start irishealth   from the command line to start the IRIS instance
+ - Open the Management Portal at http://52.56.68.107:52773/csp/sys/%25CSP.Portal.Home.zen?$NAMESPACE=FHIR
+  - Log in with Username: SuperUser , Password: ensemble
+
+
+but I'll run through them in a bit more detail so they can be modified for other uses.
 
 ## Generating Patients:
+
 
 Find the Synthea Patient Population Generator at https://github.com/synthetichealth/synthea. Follow the READ-ME to install and test.
 
@@ -31,5 +43,7 @@ Note: Up to 5 patients, not always exactly 5 patients, because of how Synthea us
 
 ## The FHIR Server:
 
-Instructions at https://docs.intersystems.com/irisforhealth20221/csp/docbook/DocBook.UI.Page.cls?KEY=HXFHIR_server_install, or use our instance i-04d2542875fdd193a named UKFHIRSERVER on the UK Sales Engineering AWS.
+Instructions at https://docs.intersystems.com/irisforhealth20221/csp/docbook/DocBook.UI.Page.cls?KEY=HXFHIR_server_install, or use our instance i-04d2542875fdd193a named UKFHIRSERVER on the UK Sales Engineering AWS account.
+
+To load your generated data onto the 
 
