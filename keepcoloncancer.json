@@ -1,0 +1,65 @@
+{
+    "name": "keep",
+    "remarks": [
+      "A blank module"
+    ],
+    "states": {
+      "Initial": {
+        "type": "Initial",
+        "conditional_transition": [
+          {
+            "transition": "Keep",
+            "condition": {
+              "condition_type": "Or",
+              "conditions": [
+                {
+                  "condition_type": "Active Condition",
+                  "codes": [
+                    {
+                        "system": "SNOMED-CT",
+                        "code": "68496003",
+                        "display": "Polyp of colon"
+                    }
+                  ]
+                },
+                {
+                  "condition_type": "Attribute",
+                  "attribute": "colorectal_cancer_stage",
+                  "operator": "==",
+                  "value": 1
+                },
+                {
+                    "condition_type": "Attribute",
+                    "attribute": "colorectal_cancer_stage",
+                    "operator": "==",
+                    "value": 2
+                },
+                {
+                    "condition_type": "Attribute",
+                    "attribute": "colorectal_cancer_stage",
+                    "operator": "==",
+                    "value": 3
+                },
+                {
+                    "condition_type": "Attribute",
+                    "attribute": "colorectal_cancer_stage",
+                    "operator": "==",
+                    "value": 4
+                }
+                  ]
+                }
+            },
+          {
+            "transition": "Terminal"
+          }
+        ]
+      },
+      "Terminal": {
+        "type": "Terminal"
+      },
+      "Keep": {
+        "type": "Terminal"
+      }
+    },
+    "gmf_version": 2
+  }
