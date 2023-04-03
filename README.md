@@ -18,10 +18,17 @@ This is a set of instructions to run and modify the FHIRSQLBuilder demo, includi
   - Connection/SSH/Auth/Credentials/Private Key File for Authentication: UKFHIR.ppk
   - Run:   iris start irishealth   from the PuTTY command line to start the IRIS instance
  - Open the Management Portal at http://52.56.68.107:52773/csp/sys/%25CSP.Portal.Home.zen?$NAMESPACE=FHIR
-  - Log in with Username: SuperUser , Password: ensemble
+    - Log in with Username: SuperUser , Password: ensemble
 
 - Go to https://wrc.intersystems.com/wrc/coDistEvaluation.csp and follow the instructions to set up the FHIR SQL Builder in a container
   - You may have to add   command: --check-caps false  to the docker compose file (as attached)
+  - Also note that steps 8 and 15 should say port 52773 not 52772
+ 
+ Here you can inspect or edit the current transformation specifications (mappings from FHIR resources to tables) and refresh the projections. 
+ 
+ Warning: Editing the Specifications may affect functionality of later parts of the demo if not careful (see Editing the Specifications section below) 
+ 
+ Note also that at the time of writing, the Builder needs to be 'woken up' by inspecting the Transformation Specification of a local repository before editing Transformation Specification on a remote repository (like the one on AWS).
 
 
 but I'll run through them in a bit more detail so they can be modified for other uses.
