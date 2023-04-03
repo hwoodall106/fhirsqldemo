@@ -1,6 +1,8 @@
-# fhirsqldemo
+# FHIR SQL Builder Demo
 
 This is a set of instructions to run and modify the FHIRSQLBuilder demo, including an outline of how it works.
+
+## Overview:
 
 - We generate synthetic patient populations via Synthea
 - Send them via HTTP to a FHIR Server hosted on AWS
@@ -14,9 +16,12 @@ This is a set of instructions to run and modify the FHIRSQLBuilder demo, includi
 - Download PuTTY at https://www.putty.org/ to SSH to the instance
   - IP: 52.56.68.107
   - Connection/SSH/Auth/Credentials/Private Key File for Authentication: UKFHIR.ppk
-  - Run:   iris start irishealth   from the command line to start the IRIS instance
+  - Run:   iris start irishealth   from the PuTTY command line to start the IRIS instance
  - Open the Management Portal at http://52.56.68.107:52773/csp/sys/%25CSP.Portal.Home.zen?$NAMESPACE=FHIR
   - Log in with Username: SuperUser , Password: ensemble
+
+- Go to https://wrc.intersystems.com/wrc/coDistEvaluation.csp and follow the instructions to set up the FHIR SQL Builder in a container
+  - You may have to add   command: --check-caps false  to the docker compose file (as attached)
 
 
 but I'll run through them in a bit more detail so they can be modified for other uses.
