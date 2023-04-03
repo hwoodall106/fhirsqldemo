@@ -73,3 +73,7 @@ Note that you may have to run it twice due to the FHIR Server wanting the hospit
 
 You can now run getjson.py to return the Patient IDs of successfully loaded patients.
 Note that you may have to     pip install requests     to run getjson.py
+
+### The FHIR SQL Builder:
+
+
