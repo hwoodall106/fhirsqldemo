@@ -10,7 +10,7 @@ This is a set of instructions to run and modify the FHIRSQLBuilder demo, includi
 
 All of these steps have been done, but I'll run through them in a bit more detail so they can be modified for other uses.
 
-
+## Generating Patients:
 
 Find the Synthea Patient Population Generator at https://github.com/synthetichealth/synthea. Follow the READ-ME to install and test.
 
@@ -28,4 +28,8 @@ run_synthea -p 5 -k keepcoloncancer.json Somerset Bristol
 which gives us up to 5 patients from Bristol with colon cancer, as well as a hospitalinformation FHIR Bundle, and a practitionerinformation FHIR Bundle.
 
 Note: Up to 5 patients, not always exactly 5 patients, because of how Synthea uses modules (explained here https://github.com/synthetichealth/synthea/wiki/Keep-Patients-Module)
+
+## The FHIR Server:
+
+Instructions at https://docs.intersystems.com/irisforhealth20221/csp/docbook/DocBook.UI.Page.cls?KEY=HXFHIR_server_install, or use our instance i-04d2542875fdd193a named UKFHIRSERVER on the UK Sales Engineering AWS.
 
