@@ -28,7 +28,7 @@ This is a set of instructions to run and modify the FHIRSQLBuilder demo, includi
  
 - Open the FHIR SQL Builder UI at http://localhost:52773/csp/fhirsql/index.csp#/. Here you can inspect or edit the current transformation specifications (mappings from FHIR resources to tables), refresh the projections, or add new repositories to analyse. 
  
- Warning: Editing the Specifications may affect functionality of later parts of the demo if not careful (see the 'The FHIR SQL Builder - Transformation Specifications' section below) 
+ Warning: Editing the Specifications may affect functionality of later parts of the demo if not careful (see the 'The FHIR SQL Builder' section below) 
  
  Note also that at the time of writing, the Builder needs to be 'woken up' by inspecting the Transformation Specification of a local repository before editing Transformation Specification on a remote repository (like the one on AWS).
 
@@ -82,12 +82,13 @@ Setup the FHIR SQL Builder as described in the 'To explore our existing demo' se
   2. Create and Edit Transformation Specifications using a repository analysis
   3. Create and Update projections of the FHIR data through a Specification to relational tables
 
-The key step here is the creation and editing of Transformation Specifications from the FHIR resource structure to tables:
+The key step here is the creation and editing of Transformation Specifications from the FHIR resource structure to tables.
 
-### The FHIR SQL Builder - Transformation Specifications:
+Transformation Specifications are built from repository Analyses, and define which properties in FHIR resources will be mapped to which columns in the tables. You can add properties to tables by selecting the 'Include this element in the schema' button. You'll then be able to choose a column name and whether or not to add an index to the column.
 
+Finally, when you perform the projection, the Builder will generate table classes for the tables you've defined.
 
-
-
-
+Note:
+ - When you first start the Builder, it doesn't show the available properties from an Analysis of a remote repository. Once you try and edit or create a Transformation Specification based on a local Analysis, it seems to 'wake up' and it will now work with the remote repository... I don't know why this happens.
+ - When you re-project your data, the Builder re-generates the table classes. As a consequence, any editions you've made to the table classes will be deleted. This causes problems when you re-project to the package awsrepotesttest, as I've added a property to the awsrepotesttest.Patient class to calculate the patient's age, and then use this in the cubes. Therefore, if you re-project to awsrepotesttest, you must copy the text from AgeProperty.txt to be the final property in awsrepotesttest.Patient.cls in Studio, and then re-compile the class. This is a bit of a hack and should be fixed at some point.
 
