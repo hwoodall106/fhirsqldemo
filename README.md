@@ -92,3 +92,6 @@ Note:
  - When you first start the Builder, it doesn't show the available properties from an Analysis of a remote repository. Once you try and edit or create a Transformation Specification based on a local Analysis, it seems to 'wake up' and it will now work with the remote repository... I don't know why this happens.
  - When you re-project your data, the Builder re-generates the table classes. As a consequence, any editions you've made to the table classes will be deleted. This causes problems when you re-project to the package awsrepotesttest, as I've added a property to the awsrepotesttest.Patient class to calculate the patient's age, and then use this in the cubes. Therefore, if you re-project to awsrepotesttest, you must copy the text from AgeProperty.txt to be the final property in awsrepotesttest.Patient.cls in Studio, and then re-compile the class. This is a bit of a hack and should be fixed at some point.
 
+### Analytics:
+
+We've built custom cubes on the tables in the awsrepotesttest Package and the dashboards 'Busy Dash' and 'Quiet Dash' are based on these cubes. Feel free to edit to your liking.
