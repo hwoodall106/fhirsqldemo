@@ -28,7 +28,7 @@ This is a set of instructions to run and modify the FHIRSQLBuilder demo, includi
  
 - Open the FHIR SQL Builder UI at http://localhost:52773/csp/fhirsql/index.csp#/. Here you can inspect or edit the current transformation specifications (mappings from FHIR resources to tables), refresh the projections, or add new repositories to analyse. 
  
- Warning: Editing the Specifications may affect functionality of later parts of the demo if not careful (see Editing the Specifications section below) 
+ Warning: Editing the Specifications may affect functionality of later parts of the demo if not careful (see the 'The FHIR SQL Builder - Transformation Specifications' section below) 
  
  Note also that at the time of writing, the Builder needs to be 'woken up' by inspecting the Transformation Specification of a local repository before editing Transformation Specification on a remote repository (like the one on AWS).
 
@@ -75,5 +75,19 @@ You can now run getjson.py to return the Patient IDs of successfully loaded pati
 Note that you may have to     pip install requests     to run getjson.py
 
 ### The FHIR SQL Builder:
+
+Setup the FHIR SQL Builder as described in the 'To explore our existing demo' section. Once setup, the UI lets you do three things:
+
+  1. Create new Analyses of FHIR Repositories (where the builder analyses the repository's resources and their properties)
+  2. Create and Edit Transformation Specifications using a repository analysis
+  3. Create and Update projections of the FHIR data through a Specification to relational tables
+
+The key step here is the creation and editing of Transformation Specifications from the FHIR resource structure to tables:
+
+### The FHIR SQL Builder - Transformation Specifications:
+
+
+
+
 
 
