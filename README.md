@@ -13,6 +13,7 @@ This is a set of instructions to run and modify the FHIRSQLBuilder demo, includi
 ## To explore our existing demo:
 
 - Start the instance i-04d2542875fdd193a named UKFHIRSERVER on the UK Sales Engineering AWS account
+- Add your IP Address to the inbound security rules for both ports 22 and 52773, protocol: TCP 
 - Download PuTTY at https://www.putty.org/ to SSH to the instance
   - IP: 52.56.68.107
   - Connection/SSH/Auth/Credentials/Private Key File for Authentication: UKFHIR.ppk
@@ -23,8 +24,9 @@ This is a set of instructions to run and modify the FHIRSQLBuilder demo, includi
 - Go to https://wrc.intersystems.com/wrc/coDistEvaluation.csp and follow the instructions to set up the FHIR SQL Builder in a container
   - You may have to add   command: --check-caps false  to the docker compose file (as attached)
   - Also note that steps 8 and 15 should say port 52773 not 52772
+  - You will also need to add the IP Address of your container to the inbound security rules on the UKFHIRSERVER, port 52773
  
- Here you can inspect or edit the current transformation specifications (mappings from FHIR resources to tables) and refresh the projections. 
+- Open the FHIR SQL Builder UI at http://localhost:52773/csp/fhirsql/index.csp#/. Here you can inspect or edit the current transformation specifications (mappings from FHIR resources to tables), refresh the projections, or add new repositories to analyse. 
  
  Warning: Editing the Specifications may affect functionality of later parts of the demo if not careful (see Editing the Specifications section below) 
  
@@ -60,7 +62,9 @@ Note: Up to 5 patients, not always exactly 5 patients, because of how Synthea us
 
 ### The FHIR Server:
 
-Instructions at https://docs.intersystems.com/irisforhealth20221/csp/docbook/DocBook.UI.Page.cls?KEY=HXFHIR_server_install, or use our instance i-04d2542875fdd193a named UKFHIRSERVER on the UK Sales Engineering AWS account.
+Installation instructions at https://docs.intersystems.com/irisforhealth20221/csp/docbook/DocBook.UI.Page.cls?KEY=HXFHIR_server_install, or use our instance i-04d2542875fdd193a named UKFHIRSERVER on the UK Sales Engineering AWS account (access as in the 'To explore our existing demo' section)
 
-To load your generated data onto the 
+If you want to load your generated data onto the instance:
+ - Edit the directory variable in postall.py to your output folder in the Synthea directory
+ - Add your IP to the S
 
