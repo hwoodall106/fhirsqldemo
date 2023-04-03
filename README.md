@@ -4,11 +4,11 @@ This is a set of instructions to run and modify the FHIRSQLBuilder demo, includi
 
 ## Overview:
 
-- We generate synthetic patient populations via Synthea
-- Send them via HTTP to a FHIR Server hosted on AWS
-- Use the FHIRSQLBuilder to map the properties of FHIR resources into columns in custom table definitions
-- The FHIRSQLBuilder then loads the data into these tables automatically
-- We can build custom cubes based on these tables and create dashboards on top of the cubes to visualise the data
+- Generate synthetic patient populations via Synthea
+- Post them to a FHIR Server hosted on AWS
+- The FHIR SQL Builder maps the properties of FHIR resources into columns in custom table definitions
+- The FHIR SQL Builder projects the data into these tables
+- Build custom cubes based on these tables and create dashboards on top of the cubes to visualise the data
 
 ## To explore our existing demo:
 
