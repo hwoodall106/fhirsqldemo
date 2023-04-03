@@ -23,7 +23,7 @@ This is a set of instructions to run and modify the FHIRSQLBuilder demo, includi
 
 - Go to https://wrc.intersystems.com/wrc/coDistEvaluation.csp and follow the instructions to set up the FHIR SQL Builder in a container
   - You may have to add   command: --check-caps false  to the docker compose file (as attached)
-  - Also note that steps 8 and 15 should say port 52773 not 52772
+  - Also note that steps 8 and 15 should say port 52773 not 52772, though you should be aware about port priority on localhost and adjust accordingly
   - You will also need to add the IP Address of your container to the inbound security rules on the UKFHIRSERVER, port 52773
  
 - Open the FHIR SQL Builder UI at http://localhost:52773/csp/fhirsql/index.csp#/. Here you can inspect or edit the current transformation specifications (mappings from FHIR resources to tables), refresh the projections, or add new repositories to analyse. 
