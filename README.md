@@ -30,10 +30,15 @@ This is a set of instructions to run and modify the FHIRSQLBuilder demo, includi
  
  Note also that at the time of writing, the Builder needs to be 'woken up' by inspecting the Transformation Specification of a local repository before editing Transformation Specification on a remote repository (like the one on AWS).
 
+Everything should now be set up. You can explore:
+ - The Transformation Specifications in the SQLBuilder UI
+ - The generated tables in System Explorer in the Management Portal
+ - The cubes in the Architect
+ - The dashboards (called Busy Dash and Quieter Dash) in the User Portal
 
-but I'll run through them in a bit more detail so they can be modified for other uses.
+## Deeper look at the components:
 
-## Generating Patients:
+### Generating Patients:
 
 
 Find the Synthea Patient Population Generator at https://github.com/synthetichealth/synthea. Follow the READ-ME to install and test.
@@ -53,7 +58,7 @@ which gives us up to 5 patients from Bristol with colon cancer, as well as a hos
 
 Note: Up to 5 patients, not always exactly 5 patients, because of how Synthea uses modules (explained here https://github.com/synthetichealth/synthea/wiki/Keep-Patients-Module)
 
-## The FHIR Server:
+### The FHIR Server:
 
 Instructions at https://docs.intersystems.com/irisforhealth20221/csp/docbook/DocBook.UI.Page.cls?KEY=HXFHIR_server_install, or use our instance i-04d2542875fdd193a named UKFHIRSERVER on the UK Sales Engineering AWS account.
 
