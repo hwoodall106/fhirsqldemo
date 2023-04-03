@@ -1,0 +1,3 @@
+Property Age As %Integer [ Calculated, SqlComputeCode = { set BirthDate = {BirthDate}
+														  &sql(SELECT DATEDIFF(yy,:BirthDate,DATE(+$ZTIMESTAMP)) INTO :AGE)
+														  set {*} = AGE}, SqlComputed ];
