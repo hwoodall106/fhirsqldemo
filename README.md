@@ -94,4 +94,4 @@ Note:
 
 ### Analytics:
 
-We've built custom cubes on the tables in the awsrepotesttest Package and the dashboards 'Busy Dash' and 'Quiet Dash' are based on these cubes. Feel free to edit to your liking.
+We've built custom cubes on the tables in the awsrepotesttest Package and the dashboards 'Busy Dash' and 'Quiet Dash' are based on these cubes. Feel free to edit to your liking or project to a new package and start again. Enjoy!
