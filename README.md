@@ -66,5 +66,6 @@ Installation instructions at https://docs.intersystems.com/irisforhealth20221/cs
 
 If you want to load your generated data onto the instance:
  - Edit the directory variable in postall.py to your output folder in the Synthea directory
- - Add your IP to the S
+ - Possibly edit the 
+ - Run 
 
