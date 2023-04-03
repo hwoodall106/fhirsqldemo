@@ -66,6 +66,10 @@ Installation instructions at https://docs.intersystems.com/irisforhealth20221/cs
 
 If you want to load your generated data onto the instance:
  - Edit the directory variable in postall.py to your output folder in the Synthea directory
- - Possibly edit the 
- - Run 
+ - Possibly edit the lookback variable if the records were generated more than an hour ago
+ - Run postall.py
+ 
+Note that you may have to run it twice due to the FHIR Server wanting the hospitalinformation and practitionerinformation bundles first.
 
+You can now run getjson.py to return the Patient IDs of successfully loaded patients.
+Note that you may have to     pip install requests     to run getjson.py
