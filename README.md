@@ -16,7 +16,7 @@ This is a set of instructions to run and modify the FHIRSQLBuilder demo, includi
 - Add your IP Address to the inbound security rules on ports 22 and 52773, protocol: TCP 
 - Download PuTTY at https://www.putty.org/ to SSH to the instance
   - IP: 52.56.68.107
-  - Connection/SSH/Auth/Credentials/Private Key File for Authentication: UKFHIR.ppk
+  - Connection/SSH/Auth/Credentials/Private Key File for Authentication: UKFHIR.ppk (in the UK SE Microsoft Teams File sharing folder)
   - Run:   iris start irishealth   from the PuTTY command line to start the IRIS instance
  - Open the Management Portal at http://52.56.68.107:52773/csp/sys/%25CSP.Portal.Home.zen?$NAMESPACE=FHIR
     - Log in with Username: SuperUser , Password: ensemble
